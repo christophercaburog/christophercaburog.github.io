@@ -250,13 +250,7 @@ function iniciarBinds(content,exp,pro,edu,blog,con,por,slider,menu,row_menu,stat
 
     /***********************run twitter*********************************/
 
-            jQuery('#twitter').jtwt({
-
-                username: "twitter",
-                count: 2,
-                image_size: 2
-
-            });
+         
 
     /******************end run twitter**********************************/
 
