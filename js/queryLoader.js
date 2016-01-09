@@ -17,7 +17,7 @@ var QueryLoader = {
 	doneStatus: 0,
 	doneNow: 0,
 	selectorPreload: "body",
-	ieLoadFixTime: 2000,
+	// ieLoadFixTime: 2000,
 	ieTimeout: "",
 		
 	init: function() {
@@ -38,23 +38,23 @@ var QueryLoader = {
 		}
 		
 		//help IE drown if it is trying to die :)
-		QueryLoader.ieTimeout = setTimeout("QueryLoader.ieLoadFix()", QueryLoader.ieLoadFixTime);
+		// QueryLoader.ieTimeout = setTimeout("QueryLoader.ieLoadFix()", QueryLoader.ieLoadFixTime);
 	},
 	
-	ieLoadFix: function() {
-		var ie = navigator.userAgent.match(/MSIE (\d+(?:\.\d+)+(?:b\d*)?)/);
+	// ieLoadFix: function() {
+	// 	var ie = navigator.userAgent.match(/MSIE (\d+(?:\.\d+)+(?:b\d*)?)/);
 		
-		if (ie[0].match("MSIE")) {
+	// 	if (ie[0].match("MSIE")) {
 		
-				while ((100 / QueryLoader.doneStatus) * QueryLoader.doneNow < 100) {
-				QueryLoader.imgCallback();
+	// 			while ((100 / QueryLoader.doneStatus) * QueryLoader.doneNow < 100) {
+	// 			QueryLoader.imgCallback();
 
-			console.log('ok here');
+	// 		console.log('ok here');
 			
-			}
-		}
+	// 		}
+	// 	}
 	
-	},
+	// },
 	
 	imgCallback: function() {
 		QueryLoader.doneNow ++;
